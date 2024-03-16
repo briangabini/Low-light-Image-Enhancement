@@ -22,8 +22,8 @@ inputs=[
         gr.Slider(minimum=0, maximum=1, value=0.6, label="Gamma", info="The gamma correction parameter."),
         gr.Slider(minimum=0, maximum=1, value=0.15, label="Lambda", info="The weight for balancing the two terms in the illumination refinement optimization objective."),
         gr.Number(value=3, minimum=0, label="Sigma", info="Spatial standard deviation for spatial affinity based Gaussian weights.")
-], 
-outputs=["image"],
+]
+outputs=["image"]
 examples=[["demo/1.jpg"], ["demo/2.bmp"]]
 
 def enhance_image(image, gamma, lambda_, sigma, lime=True, bc=1, bs=1, be=1, eps=1e-3):
